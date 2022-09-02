@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      tr,
+      th,
+      td {
+        border: 1px black solid;
+      }
+    </style>
+    <script>
+      function addtextintd() {
+        var name = document.getElementById("namelist");
+        var namefinal = name.value;
+        var address = document.getElementById("addresslist");
+        var addressfinal = address.value;
+        var tel = document.getElementById("tellist");
+        var telfinal = tel.value;
+
+        var td1 = document.createElement("td");
+        td1.innerHTML = namefinal;
+        var td2 = document.createElement("td");
+        td2.innerHTML = addressfinal;
+        var td3 = document.createElement("td");
+        td3.innerHTML = telfinal;
+
+        var tr = document.createElement("tr");
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        var tb = document.getElementById("table");
+        tb.appendChild(tr);
+      }
+    </script>
+  </head>
+  <body>
+    <p>ชื่อลูกค้า : <input type="text" id="namelist" /></p>
+    <p>ที่อยู่ : <input type="text" id="addresslist" /></p>
+    <p>โทรศัพท์ : <input type="text" id="tellist" /></p>
+    <input type="button" name="" id="" value="เพิ่ม" onclick="addtextintd()" />
+    <hr />
+    <table style="width: 80%" id="table">
+      <tr>
+        <th>ชื่อลูกค้า</th>
+        <th>ที่อยู่</th>
+        <th>โทรศัพท์</th>
+      </tr>
+    </table>
+  </body>
+</html>
